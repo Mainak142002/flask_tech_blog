@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>All Technical Blogs</h2>
+    {% for blog in blogs %}
+        <div style="margin-bottom: 15px; padding: 10px; border: 1px solid #ccc;">
+            <h3>{{ blog.title }}</h3>
+            <small>by {{ blog.author }}</small>
+            <p>{{ blog.desc }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
